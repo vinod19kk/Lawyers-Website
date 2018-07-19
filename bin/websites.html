@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Websites</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    footer {
+      background-color: #000000;
+      padding: 25px;
+    }
+    #ticker_container{margin-top:6px;}
+    #newscontent {margin-right: 10px; float: left;}
+    #newscontent a {color: #585858;}
+    #news {display: none;}
+    #controls { float: right; height: 16px;}
+    #news {display: none;}
+    .news_tricker{width:50%;}
+  </style>
+  
+  <script type="text/javascript">jQuery(function(){
+		jQuery('#ticker').tickerme();
+	});
+	
+	
+	
+	// js code for news ticker
+	
+	(function(e){e.fn.tickerme=function(t){var n=e.extend({},e.fn.tickerme.defaults,t);return this.each(function(){function a(){e(t).hide();e("body").prepend(r).prepend(i);var n='<div id="ticker_container">';n+='<div id="newscontent"><div id="news"></div></div>';n+='<div id="controls" style="margin-top:10%;">';n+='<a href="#" id="prev_trigger"><svg class="icon icon-prev" viewBox="0 0 32 32"><use xlink:href="#icon-prev"></use></svg></a>  ';n+='<a href="#" id="pause_trigger"><svg class="icon icon-pause" viewBox="0 0 32 32"><use xlink:href="#icon-pause"></use></svg></a>  ';n+='<a href="#" id="play_trigger" style="display:none"><svg class="icon icon-play" viewBox="0 0 32 32"><use xlink:href="#icon-play"></use></svg></a>  ';n+='<a href="#" id="next_trigger"><svg class="icon icon-next" viewBox="0 0 32 32"><use xlink:href="#icon-next"></use></svg></a>';n+="</div>";n+="</div>";e(n).insertAfter(t);e(t).children().each(function(t){s[t]=e(this).html()});f()}function f(){if(o==s.length-1){o=0}else{o++}if(n.type=="fade"){e("#news").fadeOut(n.fade_speed,function(){e("#newscontent").html('<div id="news">'+s[o]+"</div>");e("#news").fadeIn(n.fade_speed)})}u=setTimeout(f,n.duration)}var t=e(this);var r='<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224" height="32" viewBox="0 0 224 32"><defs><g id="icon-play"><path class="path1" d="M6 4l20 12-20 12z"></path></g><g id="icon-pause"><path class="path1" d="M4 4h10v24h-10zM18 4h10v24h-10z"></path></g><g id="icon-prev"><path class="path1" d="M18 5v10l10-10v22l-10-10v10l-11-11z"></path></g><g id="icon-next"><path class="path1" d="M16 27v-10l-10 10v-22l10 10v-10l11 11z"></path></g></defs></svg>';var i='<style type="text/css">#ticker_container{width:100%}#newscontent{float:left}#news{display:none}#controls{float:right;height:16px}.icon{display:inline-block;width:16px;height:16px;fill:'+n.control_colour+"}.icon:hover{fill:"+n.control_rollover+"}</style>";var s=[];var o=-1;var u;a();e("a#pause_trigger").click(function(){clearTimeout(u);e(this).hide();e("#play_trigger").show();return false});e("a#play_trigger").click(function(){f();e(this).hide();e("#pause_trigger").show();return false});e("a#prev_trigger").click(function(){if(o==0){o=s.length-1}else{o--}e("#newscontent").html('<div id="news" style="display:block">'+s[o]+"</div>");if(n.auto_stop)e("a#pause_trigger").trigger("click");return false});e("a#next_trigger").click(function(){if(o==s.length-1){o=0}else{o++}e("#newscontent").html('<div id="news" style="display:block">'+s[o]+"</div>");if(n.auto_stop)e("a#pause_trigger").trigger("click");return false})})};e.fn.tickerme.defaults={fade_speed:500,duration:3e3,auto_stop:true,type:"fade",control_colour:"#333333",control_rollover:"#666666"}})(jQuery)
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid" style="background-color:  black;">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="font-weight: 900;font-family:  cursive;color:  mediumseagreen;">The V's Law</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html" style="color:  white;">Home</a></li>
+      <li><a href="lawyers.html" style="color:  white;">Lawyers</a></li>
+      <li  class="active"><a href="#" style="color:  black;">Websites</a></li>
+      <li><a href="books.html" style="color:  white;">Books</a></li>
+      <li><a href="suggestions.html" style="color:  white;">Suggestions</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="login_signup.html" style="color:  white;" class="glyphicon glyphicon-user"> Login / SignUp</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+ <h2 style="font-family:  monospace;color:  cornflowerblue;">Websites</h2><br> 
+ <div class="news_tricker">
+            	<div class="news_cover"><h3>News Updates</h3></div><br>
+                <ul id="ticker">
+					<li><a href='' style="color: chocolate;"><h4>Business heads back DTI bid for free mall space for MSMEs</h4> </a></li>
+                    <li><a href='' style="color: chocolate;"><h4> OECD-FAO Agricultural Outlook 2016-2025 </h4></a></li>
+                    <li><a href='' style="color: chocolate;"><h4> President Mukherjee condoles passing away of A.C. Jose </h4></a></li>
+                    <li><a href='' style="color: chocolate;"><h4> New International Standard to tackle Informal Economy </h4></a></li>
+                    <li><a href='' style="color: chocolate;"><h4> Mandatory Energy Assessment by Dec 2015 </h4></a></li>
+                    <li><a href='' style="color: chocolate;"><h4> South African Minister for Small Business Development Zulu's Maiden Budget Speech </h4></a></li>
+                    <li><a href='' style="color: chocolate;"><h4> Small Businesses are the Big Deal not only for Economy but in Politics too </h4></a></li>
+                </ul>
+            </div>
+</div><br><br><br><br><br><br><br><br>
+
+<footer class="container-fluid text-center">
+ <div class="container" style="margin-left: 11%;">
+ <div class="row">
+   <div class="col-sm-4" style="text-align: left;"><h4 style="color: #1f8623;margin-left: 11%;font-family:  cursive;">Lawyers</h4>
+    <ul>
+		<li><a href="#" style="color: #cec5c5;">Lawyers in Delhi</a></li>
+		<li><a href="#" style="color: #cec5c5;">Lawyers in Bengaluru</a></li>
+		<li><a href="#" style="color: #cec5c5;">Lawyers in Hyderabad</a></li>
+		<li><a href="#" style="color: #cec5c5;">Lawyers in Mumbai</a></li>
+	</ul>
+	</div>
+	 <div class="col-sm-4" style="text-align: left;"><h4 style="color: #1f8623;margin-left: 10%;font-family:  cursive;">Indian Laws</h4>
+    <ul>
+		<li><a href="#" style="color: #cec5c5;">Indian Penal Code</a></li>
+		<li><a href="#" style="color: #cec5c5;">Hindu Marriage Act</a></li>
+		<li><a href="#" style="color: #cec5c5;">Consumer Protection Act</a></li>
+		<li><a href="#" style="color: #cec5c5;">Criminal Procedure Code</a></li>
+	</ul>
+  </div>
+  <div class="col-sm-4" style="text-align: left;"><h4 style="color: #1f8623;margin-left: 10%;font-family:  cursive;">The V's Law</h4>
+    <ul>
+		<li><a href="#" style="color: #cec5c5;">About Us</a></li>
+		<li><a href="#" style="color: #cec5c5;">Lawyers</a></li>
+		<li><a href="#" style="color: #cec5c5;">Websites</a></li>
+		<li><a href="#" style="color: #cec5c5;">Books</a></li>
+		<li><a href="contactus.html" style="color: #cec5c5;">Contact Us</a></li>
+	</ul>
+  </div>
+  </div>
+  </div>
+</footer>
+</body>
+</html>
